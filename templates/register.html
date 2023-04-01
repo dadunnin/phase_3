@@ -9,14 +9,14 @@
 
 <body>
     <h1>Create User</h1>
-    <form method="POST" action="{{ url_for('register') }}">
+    <form method="POST" action="{{ url_for('member_blueprint.register') }}">
         {{ form.csrf_token }}
         {{ form.first_name.label }} {{ form.first_name }}<br>
         {{ form.last_name.label }} {{ form.last_name }}<br>
-        {{ form.age.label }} {{ form.age }}<br>
         {{ form.hometown.label }} {{ form.hometown }}<br>
         {{ form.email.label }} {{ form.email }}<br>
         {{ form.dob.label }} {{ form.dob }}<br>
+        {{ form.gender.label }} {{ form.gender }}<br>
         {{ form.password.label }} {{ form.password }}<br>
         {{ form.submit }}
     </form>

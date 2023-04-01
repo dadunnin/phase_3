@@ -1,5 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for
-from forms import RegistrationForm
+from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 
@@ -20,13 +19,13 @@ def hello():
     return 'Hello, World!'
 
 
-@app.route('/register', methods=['GET', 'POST'])
-def register():
-    form = RegistrationForm()
-    if form.validate_on_submit():
-        return redirect(url_for('success'))
-    return render_template('register.html', form=form)
+@app.route('/success')
+def success():
+    return 'It worked!'
 
+# Import and register the blueprint after initializing the db
+from routes.member_routes import member_blueprint
+app.register_blueprint(member_blueprint, url_prefix="/member")
 
 if __name__ == '__main__':
     app.run()
