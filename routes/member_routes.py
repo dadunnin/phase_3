@@ -1,7 +1,7 @@
 from curses import flash
 from flask import Blueprint, render_template, redirect, url_for
 from flask_login import login_user
-from member_forms import LoginForm, RegistrationForm
+from forms.member_forms import LoginForm, RegistrationForm
 
 member_blueprint = Blueprint('member_blueprint', __name__)
 

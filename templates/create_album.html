@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Album</title>
+</head>
+
+<body>
+    <h1>Create Album</h1>
+    <form method="POST" action="{{ url_for('album_blueprint.createAlbum') }}">
+        {{ form.csrf_token }}
+        {{ form.album_name.label }} {{form.album_name }}
+        {{ form.submit }}
+    </form>
+</body>
+
+</html>

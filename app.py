@@ -36,5 +36,8 @@ def success():
 from routes.member_routes import member_blueprint
 app.register_blueprint(member_blueprint, url_prefix="/member")
 
+from routes.album_routes import album_blueprint
+app.register_blueprint(album_blueprint, url_prefix="/album")
+
 if __name__ == '__main__':
     app.run()

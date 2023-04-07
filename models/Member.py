@@ -12,7 +12,7 @@ class Member(UserMixin, db.Model):
     hometown = db.Column(db.String(128), nullable=True)
     gender = db.Column(db.String(1), nullable=True)
     password = db.Column(db.String(128), nullable=False)
-    
+
     def set_password(self, password):
         self.password = generate_password_hash(password)
 
