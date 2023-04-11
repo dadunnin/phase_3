@@ -32,7 +32,7 @@ CREATE TABLE Photos (
   photo_id SERIAL PRIMARY KEY,
   album_id INTEGER NOT NULL,
   caption TEXT, 
-  data BYTEA,
+  img VARCHAR(128),
   FOREIGN KEY (album_id) REFERENCES Album(album_id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 

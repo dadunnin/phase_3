@@ -38,6 +38,8 @@ def get_engine_url():
 # target_metadata = mymodel.Base.metadata
 import models.Member
 import models.Album
+import models.Photo
+
 config.set_main_option('sqlalchemy.url', get_engine_url())
 target_db = current_app.extensions['migrate'].db
 
